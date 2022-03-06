@@ -101,7 +101,7 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 
 - Period = 2 * delay * no. of inverters, where delay is time taken to charge the output capacitor of charge pump.
 - Frequency depends on delay, which inturn is dependent on current supplied.
-- In the given 3 stage inverter, output flips by '$\pi' in only half the oscillation period.
+- In the given 3 stage inverter, output flips by 'pi radians' in only half the oscillation period.
 ![Calculation](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20vco%20tp%20calc.jpeg)
 
 - A frequency divider, also called a clock divider or scaler or prescaler, is a circuit that takes an input signal of a frequency, f, and generates an output signal of a frequency : nf, where n is some factor.
@@ -109,15 +109,38 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 - Implemented using a T flip-flop.
 - Output frequency of T flip-flop is half the frequency of the input signal.
 
+- IMPORTANT TERMS:
+
+  1. Lock range : Lock stage is defined as the stage where the o/p is mimicking the i/p. The range of frequencies over which the PLL is able to follow i/p frequency variations once loacked is called as lock range.
+  
+  2. Capture range : The range of frequencies for which the PLL is able to attain a lock state from an unlocked state. It depends on filter bandwidth.
+  
+  Lock range > Capture Range
+  
+  3. Settling time : The time within which a PLL is able to attain a lock from an initially unlocked state. It depends on how quickly charge pump rises to its stable value.
 
 ## Part 5: Tool Setup and Design Flow
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+- Advisable to build any software tool from its source code as it will be the latest version with all the updates and patches.
+- Tools used:
+   1. NgSPICE - Transistor-level circuit simulation
+   2. Magic - Parasitic design & extraction
+  
+ - Steps to install NgSPICE:
+    Type `sudo apt-get install ngspice` in the Terminal.
+    
+ - Steps to install Magic:
+   1. To update the OS : `sudo apt-get update && sudo apt-get upgrade`
+   2. Clone the Magic Repository : `git clone git://opencircuitdesign.com/magic`
+   3. Install the csh shell : `sudo apt-get install csh`
+   4. Entering the correct directory : `cd magic`
+   5. `./configure` 
+   6. `make` to compile.
+   7. `sudo make install` to install magic on the device.
+   
+- Development Flow :
+![Development Flow](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Development%20Flow.png)
+
 ## Part 6: Introduction to PDK, specifications and pre-layout circuits
 
 ![]()
