@@ -46,12 +46,34 @@ A brief introduction to the two softwaress; NgSPICE and Magic was also provided,
 
 ## Part 1: Introduction to PLL
 
-Phase-locked loops (PLL) is a control system in which the output signal is based on the input signal and a feedback reference. It is used extensively to generate a precise clock signal with a clear spectrum, over a wide range of frequencies. In other words, PLLs mimics the reference frequency it is provided.
+Phase-locked loops (PLL) is a control system in which the output signal is based on the input signal and a feedback reference. It is used extensively to generate a precise clock signal with a clear spectrum (i.e., without phase or frequency noise), over a wide range of frequencies.
 
-![PLL Theory](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20desc.jpeg)
-![Internal Components](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20int%20comps.jpeg)
+- Quartz crystals and Voltage-Controlled Oscillators (VCO) can be used to generate clock pulse.
+- Quartz crystals have pure spectum but can only generate one frequency.
+- VCOs can be controlled with an input voltage signal. However, they tend to have noise in their frequency spectrum.
+
+![PLL Theory 1](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20desc.jpeg)
+![PLL Theory 2](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20int%20comps.jpeg)
+![Internal Components](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20PLL%20internal%20components.png)
+
+Intuition : PLLs mimics the reference frequency it is provided, while maintaining a clean frequency spectrum. Mimicking a reference frequency refers to producing output frequency which is either equal to or an integral multiple of the reference frequency.
+![Intuition](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20PLL.png)
 
 ## Part 2: Introduction to Phase Frequency Detector
+
+- The Phase Frequency Detector (PFD) is used to compare the input reference signal and output feedback signal and generate a control signal. It measures the phase difference between Reference (REF) and Output (OUT) signal, using an XOR gate.
+- The XOR gate help us detect differences in phase, but we do not have an idea about whether the Output signal is leading or lagging the Reference.
+- This issue is resolved using 2 different outputs; UP and DOWN.
+- 'Up' signal stays HIGH between falling edge of REF and falling edge of OUT.
+- 'Down'signal stays HIGH between falling edge of OUT and falling edge of REF.
+- Dead Zone : If the 2 signals input the PFD are very close, i.e., separated by a very small difference in phase, then output waveform gets clipped. This zone is called 'Dead Zone'.
+- More sensitive PFD results in better PLL.
+![Output at different frequencies](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20diff%20freq.png)
+![Output in case of lead or lag](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20lagging%20and%20leading.png)
+![PFD FSM State Diagram](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20fsm.jpeg)
+![PFD Sequential Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20fsm%20using%20ff.jpeg)
+![]()
+
 ## Part 3: Introduction to Charge Pump
 ## Part 4: Introduction to Voltage Controlled Oscillator and Frequency Divider
 ## Part 5: Tool Setup and Design Flow
