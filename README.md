@@ -138,33 +138,52 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
    6. `make` to compile.
    7. `sudo make install` to install magic on the device.
    
+   ![Commands](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Tools%20Commands.png)
+   ![Setup](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Tools%20Setup.png)
+   
 - Development Flow :
 ![Development Flow](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Development%20Flow.png)
 
 ## Part 6: Introduction to PDK, specifications and pre-layout circuits
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+- SKY130 PDK is used.
+- PDK or process design kit is a set of files used within the semiconductor industry to model a fabrication process for the design tools used to design an integrated circuit.
+- PDK conatins transistor characteristics and other information such as standard cells, their timing information, their layouts, corresponding Verilogs and so on.
+- Transistor characteristics :
+  ![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20tran%20char.jpeg)
+- Details obtained from PLL specification :  
+![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20PLL%20spec.jpeg)
+![PLL Specification](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20PLL%20Specification.png)
+![SKY130 PDK](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20SKY130%20PDK.png)
+- Pre-Layout phase is all about the development and the transistor level simulation of the circuits.
+ Following are the pre-layout diagrams for FD, VCO, PFD and CP.
+![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20FD.jpeg)
+![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20VCO.png)
+![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20PFD.png)
+![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20CP.png)
+
 ## Part 7: Circuit design simulation tool - Ngspice Setup
 
+- The first step is to install ngspice using ubuntu's package manager. The command to do so is given above (in [Part 5](https://github.com/VrushabhDamle/sky130PLLdesignWorkshop/blob/main/README.md#part-5-tool-setup-and-design-flow)).
+- Next, we have to clone the google skywater pdk. On the terminal type `git clone https://github.com/google/skywater-pdk-libs-sky130_fd_pr.git`
+- Now we have to pick the files that we need from "skywater-pdk-libs-sky130_fd_pr" folder
+- Go to the cells folder and search nfet and in nfet folder search "nfet_01v8". Again, search "tt" and chose the file named "sky130_fd_pr__nfet_01v8__tt_leak.pm3.spice". Copy this file to the directory that will be used for PLL simulations.
+- Go to the cells folder and search pfet and in nfet folder search "pfet_01v8". Again, search "tt" and chose the file named "sky130_fd_pr__pfet_01v8__tt_leak.pm3.spice". Copy this file to the directory that will be used for PLL simulations.
+- Go to models and then go to parameters and copy the files "invariant.spice" and "lod.spice" to the directory that will be used for PLL simulations.
+- Now in terminal go to the directory that will be used for PLL simulations.
+- In the terminal type the command `nano sky130.lib`.
+- Now, include all the files that were just copied.
+- Save this file using ctrl+s and then exit using ctrl+x.
 ![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+
 ## Part 8: Layout design tool - Magic Setup
 
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+- The first step is to clone the magic repository (given in [Part 5](https://github.com/VrushabhDamle/sky130PLLdesignWorkshop/blob/main/README.md#part-5-tool-setup-and-design-flow))
+- Now we have to install the dependancies which can be found at the [Install](http://opencircuitdesign.com/magic/) page
+- Now go into the magic folder using the "cd" command and compile magic using `./configure` command.
+- Run the configure, make and install commands on the terminal.
+- Search open pdks on google and select the [RTimothy/open_pdks](https://github.com/RTimothyEdwards/open_pdks)
+- Clone this repository and compile it or download [sky130A.tech](https://drive.google.com/file/d/18BG4zzpRrcHP0UoBcNLA3sWFDVdNlUtp/view) and place it in the main folder.
 
 
 # Day 2: PLL Labs and post-layout simulations
