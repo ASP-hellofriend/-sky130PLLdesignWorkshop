@@ -45,6 +45,12 @@ The first day of the Workshop was dedicated towards acquainting us with the conc
 A brief introduction to the two softwaress; NgSPICE and Magic was also provided, along with installation and setup instructions.
 
 ## Part 1: Introduction to PLL
+
+Phase-locked loops (PLL) is a control system in which the output signal is based on the input signal and a feedback reference. It is used extensively to generate a precise clock signal with a clear spectrum, over a wide range of frequencies. In other words, PLLs mimics the reference frequency it is provided.
+
+![PLL Theory](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20desc.jpeg)
+![Internal Components](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.1%20int%20comps.jpeg)
+
 ## Part 2: Introduction to Phase Frequency Detector
 ## Part 3: Introduction to Charge Pump
 ## Part 4: Introduction to Voltage Controlled Oscillator and Frequency Divider
