@@ -67,8 +67,8 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 - 'Down'signal stays HIGH between falling edge of OUT and falling edge of REF.
 - Dead Zone : If the 2 signals input the PFD are very close, i.e., separated by a very small difference in phase, then output waveform gets clipped. This zone is called 'Dead Zone'.
 - More sensitive PFD results in better PLL.
-![Output at different frequencies](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20diff%20freq.png)
-![Output in case of lead or lag](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20lagging%20and%20leading.png)
+![Output at different frequencies](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20diff%20freq%20(2)_LI.jpg)
+![Output in case of lead or lag](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20lagging%20and%20leading%20(2)_LI.jpg)
 ![PFD FSM State Diagram](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20fsm.jpeg)
 ![PFD Sequential Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20fsm%20using%20ff.jpeg)
 
@@ -95,7 +95,7 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 
 - A voltage-controlled oscillator (VCO) is an electronic oscillator whose output frequency is proportional to its input voltage. An oscillator produces a periodic AC signal, and in VCOs, the oscillation frequency is determined by voltage.
 
-![Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20VCO.png)
+![Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20VCO%20(2)_LI.jpg)
 ![Diagram](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20vco%20diag.jpeg)
 
 - Period = 2 * delay * no. of inverters, where delay is time taken to charge the output capacitor of charge pump.
@@ -137,11 +137,11 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
    6. `make` to compile.
    7. `sudo make install` to install magic on the device.
    
-   ![Commands](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Tools%20Commands.png)
-   ![Setup](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Tools%20Setup.png)
+   ![Commands](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Tools%20Commands%20(2).png)
+   ![Setup](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Tools%20Setup%20(2)_LI.jpg)
    
 - Development Flow :
-![Development Flow](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Development%20Flow.png)
+![Development Flow](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.5%20Development%20Flow%20(2).png)
 
 ## Part 6: Introduction to PDK, specifications and pre-layout circuits
 
@@ -152,14 +152,14 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
   ![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20tran%20char.jpeg)
 - Details obtained from PLL specification :  
 ![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20PLL%20spec.jpeg)
-![PLL Specification](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20PLL%20Specification.png)
+![PLL Specification](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20PLL%20Specification%20(2).png)
 ![SKY130 PDK](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20SKY130%20PDK.png)
 - Pre-Layout phase is all about the development and the transistor level simulation of the circuits.
  Following are the pre-layout diagrams for FD, VCO, PFD and CP.
-![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20FD.jpeg)
-![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20VCO.png)
-![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20PFD.png)
-![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20CP.png)
+![Pre-Layout FD](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20FD.jpeg)
+![Pre-Layout VCO](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20VCO%20(2)_LI.jpg)
+![Pre-Layout PFD](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20PFD%20(2)_LI.jpg)
+![Pre-Layout CP](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.6%20Pre%20layout%20-%20CP%20(2)_LI.jpg)
 
 ## Part 7: Circuit design simulation tool - Ngspice Setup
 
