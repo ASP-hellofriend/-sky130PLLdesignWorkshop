@@ -40,6 +40,10 @@ This 2-day Workshop, conduted by [VLSI System Design], focuses on Phase-Locked L
 - [References](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#references)
 
 # Day 1: PLL Theory and Lab setup
+
+The first day of the Workshop was dedicated towards acquainting us with the concepts related to PLL such as its internal components, their working, the uses of PLL and why it is advantageous over other methods of frequency generation.
+A brief introduction to the two softwaress; NgSPICE and Magic was also provided, along with installation and setup instructions.
+
 ## Part 1: Introduction to PLL
 ## Part 2: Introduction to Phase Frequency Detector
 ## Part 3: Introduction to Charge Pump
@@ -50,6 +54,9 @@ This 2-day Workshop, conduted by [VLSI System Design], focuses on Phase-Locked L
 ## Part 8: Layout design tool - Magic Setup
 
 # Day 2: PLL Labs and post-layout simulations
+
+The second day of the Workshop was dedicated to labs. NgSPICE was used for simulating, first the individual components of the PLL and then the PLL itself. Then, after Layout was done, the parasitic capacitences were calculated using Magic. Finally, a brief description of Caravel was given.
+
 ## Part 9: PLL components circuit design
 ## Part 10: PLL components circuit simulations
 ## Part 11: Steps to combine PLL sub-circuits and PLL full design simulation
@@ -63,3 +70,5 @@ This 2-day Workshop, conduted by [VLSI System Design], focuses on Phase-Locked L
 ## Part 19: Tapeout labs
 
 # Conclusion
+
+The 2-Day Workshop on Phase-Locked Loop(PLL) IC design introduces its participants to the basics of IC design process, which is particularly important for students and professionals, who intend to pursue a career in Physical Design. The Workshop had a good balance between the theory and practicals. The lectures were short and informative and the labs were sufficiently challenging. The inclusion of assessments at the end was also a good for revision. The overall rigour and depth of the Workshop is highly appreciable.
