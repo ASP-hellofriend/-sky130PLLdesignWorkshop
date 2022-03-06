@@ -72,30 +72,180 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 ![Output in case of lead or lag](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20PFD%20lagging%20and%20leading.png)
 ![PFD FSM State Diagram](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20fsm.jpeg)
 ![PFD Sequential Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.2%20fsm%20using%20ff.jpeg)
-![]()
 
 ## Part 3: Introduction to Charge Pump
+
+- Charge Pump is defined as a kind of DC-to-DC converter that uses capacitors for energetic charge storage to raise or lower voltage.
+- They can be modelled as a combination of 2 ideal current sources, which are controlled by 2 switches.
+
+![Desc](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.3%20charge%20pump.jpeg)
+
+- In a PLL, it is used to convert the digital measure of phase/frequency difference into an analog signal to control the VCO.
+- The capacitor across the Output is used to smoothen the Output Voltage swing.
+- To further smoothen the voltage swing, a low-pass filter, called as Loop Filter, can be used.
+
+![Loop Filter](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.3%20Loop%20Filter.png)
+
+- Output of charge pump controls the VCO. Higher o/p voltage results in faster charging of VCO and hence higher frequency and vice-versa.
+- Assumptions :
+               - Cx= C/10
+               - Loop filter bandwidth = 1/(1 + R.C1),
+                   where C1 = C . Cx / (C + Cx)
+
 ## Part 4: Introduction to Voltage Controlled Oscillator and Frequency Divider
+
+- A voltage-controlled oscillator (VCO) is an electronic oscillator whose output frequency is proportional to its input voltage. An oscillator produces a periodic AC signal, and in VCOs, the oscillation frequency is determined by voltage.
+
+![Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20VCO.png)
+![Diagram](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20vco%20diag.jpeg)
+
+- Period = 2 * delay * no. of inverters, where delay is time taken to charge the output capacitor of charge pump.
+- Frequency depends on delay, which inturn is dependent on current supplied.
+- In the given 3 stage inverter, output flips by '$\pi$' in only half the oscillation period.
+![Calculation](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20vco%20tp%20calc.jpeg)
+
+- A frequency divider, also called a clock divider or scaler or prescaler, is a circuit that takes an input signal of a frequency, f, and generates an output signal of a frequency : nf, where n is some factor.
+![Circuit](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20Frequency%20divider.png)
+- Implemented using a T flip-flop.
+- Output frequency of T flip-flop is half the frequency of the input signal.
+
+
 ## Part 5: Tool Setup and Design Flow
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
 ## Part 6: Introduction to PDK, specifications and pre-layout circuits
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
 ## Part 7: Circuit design simulation tool - Ngspice Setup
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
 ## Part 8: Layout design tool - Magic Setup
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 
 # Day 2: PLL Labs and post-layout simulations
 
 The second day of the Workshop was dedicated to labs. NgSPICE was used for simulating, first the individual components of the PLL and then the PLL itself. Then, after Layout was done, the parasitic capacitences were calculated using Magic. Finally, a brief description of Caravel was given.
 
 ## Part 9: PLL components circuit design
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 10: PLL components circuit simulations
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 11: Steps to combine PLL sub-circuits and PLL full design simulation
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 12: Troubleshooting steps
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 13: Layout design
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 14: Layout Walkthrough
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 15: Parasitic Extraction
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 16: Post Layout simulations
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 17: Steps to combine layouts
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 18: Tapeout theory
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
+
 ## Part 19: Tapeout labs
+
+![]()
+![]()
+![]()
+![]()
+![]()
+![]()
 
 # Conclusion
 
