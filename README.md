@@ -36,6 +36,30 @@ This 2-day Workshop, conduted by [VLSI System Design], focuses on Phase-Locked L
     - [Part 17: Steps to combine layouts](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#part-17-steps-to-combine-layouts)
     - [Part 18: Tapeout theory](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#part-18-tapeout-theory)
     - [Part 19: Tapeout labs](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#part-19-tapeout-labs)
-- [Conclusion and Opinion](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#conclusion-and-opinion)
+- [Conclusion](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#conclusion)
 - [References](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/edit/main/README.md#references)
 
+# Day 1: PLL Theory and Lab setup
+## Part 1: Introduction to PLL
+## Part 2: Introduction to Phase Frequency Detector
+## Part 3: Introduction to Charge Pump
+## Part 4: Introduction to Voltage Controlled Oscillator and Frequency Divider
+## Part 5: Tool Setup and Design Flow
+## Part 6: Introduction to PDK, specifications and pre-layout circuits
+## Part 7: Circuit design simulation tool - Ngspice Setup
+## Part 8: Layout design tool - Magic Setup
+
+# Day 2: PLL Labs and post-layout simulations
+## Part 9: PLL components circuit design
+## Part 10: PLL components circuit simulations
+## Part 11: Steps to combine PLL sub-circuits and PLL full design simulation
+## Part 12: Troubleshooting steps
+## Part 13: Layout design
+## Part 14: Layout Walkthrough
+## Part 15: Parasitic Extraction
+## Part 16: Post Layout simulations
+## Part 17: Steps to combine layouts
+## Part 18: Tapeout theory
+## Part 19: Tapeout labs
+
+# Conclusion
