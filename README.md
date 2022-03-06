@@ -101,7 +101,7 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 
 - Period = 2 * delay * no. of inverters, where delay is time taken to charge the output capacitor of charge pump.
 - Frequency depends on delay, which inturn is dependent on current supplied.
-- In the given 3 stage inverter, output flips by '\pi' in only half the oscillation period.
+- In the given 3 stage inverter, output flips by '$\pi' in only half the oscillation period.
 ![Calculation](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Theory/1.4%20vco%20tp%20calc.jpeg)
 
 - A frequency divider, also called a clock divider or scaler or prescaler, is a circuit that takes an input signal of a frequency, f, and generates an output signal of a frequency : nf, where n is some factor.
