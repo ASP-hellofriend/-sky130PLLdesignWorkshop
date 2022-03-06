@@ -164,22 +164,30 @@ Intuition : PLLs mimics the reference frequency it is provided, while maintainin
 
 ## Part 7: Circuit design simulation tool - Ngspice Setup
 
-- The first step is to install ngspice using ubuntu's package manager. The command to do so is given above (in [Part 5](https://github.com/VrushabhDamle/sky130PLLdesignWorkshop/blob/main/README.md#part-5-tool-setup-and-design-flow)).
-- Next, we have to clone the google skywater pdk. On the terminal type `git clone https://github.com/google/skywater-pdk-libs-sky130_fd_pr.git`
-- Now we have to pick the files that we need from "skywater-pdk-libs-sky130_fd_pr" folder
-- Go to the cells folder and search nfet and in nfet folder search "nfet_01v8". Again, search "tt" and chose the file named "sky130_fd_pr__nfet_01v8__tt_leak.pm3.spice". Copy this file to the directory that will be used for PLL simulations.
-- Go to the cells folder and search pfet and in nfet folder search "pfet_01v8". Again, search "tt" and chose the file named "sky130_fd_pr__pfet_01v8__tt_leak.pm3.spice". Copy this file to the directory that will be used for PLL simulations.
-- Go to models and then go to parameters and copy the files "invariant.spice" and "lod.spice" to the directory that will be used for PLL simulations.
-- Now in terminal go to the directory that will be used for PLL simulations.
+- Install NgSPICE using Ubuntu's package manager. 
+   `sudo apt-get install ngspice`
+- Fetch sky130 library needed for simulation. It is present in Google's skywater-pdk repository. We need to select the 'primitives' library.
+   `git clone https://github.com/google/skywater-pdk-libs-sky130_fd_pr.git`
+- Pick the files needed from "skywater-pdk-libs-sky130_fd_pr" folder. 
+- Go to the 'cells' folder and search for "nfet_01v8". Inside this folder, search "tt" and chose the file named "sky130_fd_pr__nfet_01v8__tt_leak.pm3.spice". Copy this file to the directory that will be used for PLL simulations (spice_lib).
+- Go to the cells folder and search for "pfet_01v8". Inside this folder, search "tt" and chose the file named "sky130_fd_pr__pfet_01v8__tt_leak.pm3.spice". Copy this file to the directory that will be used for PLL simulations (spice_lib).
+- Go to 'models' folder and then go to parameters and copy the files "invariant.spice" and "lod.spice" to the directory that will be used for PLL simulations.
+- Open Terminal in the spice_lib directory.
+
+![spice_lib dir.](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Labs%20Simulation%20Results/spice_lib%20folder.png)
+
 - In the terminal type the command `nano sky130.lib`.
 - Now, include all the files that were just copied.
-- Save this file using ctrl+s and then exit using ctrl+x.
-![]()
+- Save this file using `ctrl+S` and then exit using `ctrl+X`. Then, press `Enter`. The 'sky130.lib' file looks as follows.
+
+![](https://github.com/ASP-hellofriend/-sky130PLLdesignWorkshop/blob/main/Labs%20Simulation%20Results/sky130.lib.png)
 
 ## Part 8: Layout design tool - Magic Setup
 
-- The first step is to clone the magic repository (given in [Part 5](https://github.com/VrushabhDamle/sky130PLLdesignWorkshop/blob/main/README.md#part-5-tool-setup-and-design-flow))
-- Now we have to install the dependancies which can be found at the [Install](http://opencircuitdesign.com/magic/) page
+- Needed to work with Skywater node.
+- Clone the magic repository to get the source code.
+  `git clone git://opencircuitdesign.com/magic`
+- Then, install the dependancies which can be found at the [Install](http://opencircuitdesign.com/magic/) page.
 - Now go into the magic folder using the "cd" command and compile magic using `./configure` command.
 - Run the configure, make and install commands on the terminal.
 - Search open pdks on google and select the [RTimothy/open_pdks](https://github.com/RTimothyEdwards/open_pdks)
