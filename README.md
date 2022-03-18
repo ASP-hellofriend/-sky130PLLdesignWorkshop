@@ -932,7 +932,7 @@ Caravel is a template SoC for Efabless Open MPW and chipIgnite shuttles based on
 The 2-Day Workshop on Phase-Locked Loop(PLL) IC design introduces its participants to the basics of IC design process, which is particularly important for students and professionals, who intend to pursue a career in Physical Design. The Workshop had a good balance between the theory and practicals. The lectures were short and informative and the labs were sufficiently challenging. The inclusion of assessments at the end was also a good for revision. The overall rigour and depth of the Workshop is highly appreciable.
 
 
-## Acknowledgement
+# Acknowledgement
 
 I would like to thank [Mr. Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/) and [VLSI System Design](https://www.vlsisystemdesign.com/) for providing me with the wonderful opportunity to attend this workshop, which helped me learn more about the domain of Physical Design.
 I would also like to thank our instructor, Ms. Lakshmi S., for teaching us and also for sharing her [GitHub Repository](https://github.com/lakshmi-sathi/avsdpll_1v8) which contained all the files and information required for the successful completion of this Workshop.
